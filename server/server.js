@@ -24,7 +24,7 @@ app.use(express.json());
 // CORS setup - allow only your Vercel frontend
 app.use(
   cors({
-    origin: "https://ai-zeta-two-77.vercel.app/",
+    origin: "https://ai-zeta-two-77.vercel.app",
     credentials: true,
   })
 );

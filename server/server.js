@@ -22,7 +22,12 @@ try {
 app.use(express.json());
 
 // CORS setup - allow only your Vercel frontend
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://ai-zeta-two-77.vercel.app/",
+    credentials: true,
+  })
+);
 
 // Routes
 app.get("/", (req, res) => res.send("Server is live..."));
@@ -34,3 +39,4 @@ app.use("/api/ai", aiRouter);
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
+
